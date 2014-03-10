@@ -4,7 +4,7 @@ Given(/^the file "(.*)" exists$/) do |file|
 end
 
 When(/^I read in the file$/) do
-  @username = IO.read(@filename)
+  @username = IO.read(@filename).strip
   expect(@username).not_to be_empty
 end
 
