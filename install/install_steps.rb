@@ -14,15 +14,8 @@ def run_process(cli_string, dir='.', gemfile=false)
         cli_string, :chdir => dir
     )
   end
-  show_errors
+  raise ( @test_output + @test_errors + @test_status.to_s ) unless ( @test_status.success? && @test_errors.empty? )
 end
-
-def show_errors
-  if @test_errors.empty? == false && @test_status.success? == false
-    expect(@test_output + @test_errors + @test_status.to_s).to eql ''
-  end
-end
-
 
 ## Given Steps
 
