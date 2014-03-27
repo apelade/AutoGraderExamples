@@ -17,7 +17,7 @@ Feature: Testing instructor created homeworks
     | non-forked, > 6 commits | solutions/apelade.txt   | autograder/mvp_spec.rb | Score out of 100: 90 | apelade         |
 
   Scenario: Check GitHub api key is configured
-    Given I have a valid token set in environment variable "GIT_IMMERSION_TOKEN"
+    Given I have a valid token set in environment variable "GIT_IMMERSION_TOKEN" or "PAULS_GIT_IMMERSION_TOKEN"
     # I put mine in /etc/environment
     When I check my remaining rate limit
     Then I should see it is a number, not nil
