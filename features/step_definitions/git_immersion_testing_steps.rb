@@ -38,9 +38,10 @@ And(/^I should see the execution results with (.*)$/) do |test_title|
 end
 
 
-Given(/^I have a valid token set in environment variable "([^"]*)" or "([^"]*)"$/) do |var, pauls_var|
+Given(/^I have a valid token set in environment variable "([^"]*)"$/) do |var|
+  #Given(/^I have a valid token set in environment variable "([^"]*)" or "([^"]*)"$/) do |var, pauls_var|
   @token = ENV["#{var}"]
-  @token = ENV["#{pauls_var}"] if @token == nil
+  #@token = ENV["#{pauls_var}"] if @token == nil
 
   expect(@token).not_to be_nil
 end
@@ -58,9 +59,17 @@ Then(/^I should see it is a number, not nil$/) do
 end
 
 
+#Given(/^I have tests and token set up$/) do
+#  steps %Q{
+#    Given I have a valid token set in environment variable "GIT_IMMERSION_TOKEN" or "PAULS_GIT_IMMERSION_TOKEN"
+#    And I have the homework in "git-immersion"
+#    And AutoGraders are in "rag"
+#  }
+#end
+
 Given(/^I have tests and token set up$/) do
   steps %Q{
-    Given I have a valid token set in environment variable "GIT_IMMERSION_TOKEN" or "PAULS_GIT_IMMERSION_TOKEN"
+    Given I have a valid token set in environment variable "GIT_IMMERSION_TOKEN"
     And I have the homework in "git-immersion"
     And AutoGraders are in "rag"
   }

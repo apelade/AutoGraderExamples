@@ -3,10 +3,12 @@ rvm:
 - 1.9.3
 env:
   global:
-#   Paul's
-    - secure: "HTywVSjY2Qv78fBpPgtgcpmF25KzUpKnE7SCfqXUX+Sp8GR4rfMmB2bVuxxDwRCYm80BGMNM+C8+6SHN2NbnzWPCNjjSgycrzp2IRkaSPSganKMedM8/PDH/iIRKbAiGYKHGNDHmFhsdNzPc9vPIckDUL6qsQG9WynFyYCYLtzg="
-#   Sam's
+#   Sam's GIT_IMMERSION_TOKEN
     - secure: "MLwcHLj9um308gO3I0EGUiCR5yPylDdifFDPtUkvleaGs85bbMA/Yfy9Mn8tXXcs9fGMfoNBN1e+J5KkhENEnIXr5BKWMR6CfujxRDJB9fflAPEPz4mp0DuNIOlVj9NXiZBvyoHZIr9ZV2Ha4IPZUcQv1hzrn6DomZ5GVw3z/FM="
+#   Paul's GIT_IMMERSION_TOKEN
+    - secure: "YGVkUH1ze4+ogQN3VYdGQm/Rzto00llO64OVlxaNCuk4OhDXUGI1TeWhyKrvs1ScLfA3Vioarsc/L1OcZgSAFr7aCkFnDCrMwpU+9QsjfspeUtaKfuRCyANWImmO7GfKPcrIa8+BMN5EZonG48fwS7ZWAJDg+DoToj2hCXyDsW4="
+#   Paul's old PAULS_GIT_IMMERSION_TOKEN
+    - secure: "HTywVSjY2Qv78fBpPgtgcpmF25KzUpKnE7SCfqXUX+Sp8GR4rfMmB2bVuxxDwRCYm80BGMNM+C8+6SHN2NbnzWPCNjjSgycrzp2IRkaSPSganKMedM8/PDH/iIRKbAiGYKHGNDHmFhsdNzPc9vPIckDUL6qsQG9WynFyYCYLtzg="
 before_install:
 - gem install cucumber
 - gem install rspec
