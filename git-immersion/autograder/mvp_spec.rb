@@ -16,6 +16,9 @@ describe "Github" do
     # TODO Do these expire??
     # GIT_IMMERSION_TOKEN is configured to allow only read of public access data
     @token = ENV['GIT_IMMERSION_TOKEN']
+    # My travis doesn't like the other token which Sam generated
+    @token = ENV['PAULS_GIT_IMMERSION_TOKEN'] if @token == nil
+
     @client = Octokit::Client.new(:access_token => @token)
     @commits =  @client.commits_since(USER_REPO, START_DATE)
   end
