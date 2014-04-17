@@ -3,10 +3,11 @@ Feature: Installation of dependencies
   As an AutoGrader deployer
   I need to check the installation
 
-  Scenario: Install gems
-    Given that I am in the project root directory "AutoGraderExamples"
-    When I install gems
-    Then I should see that there are no errors
+##  Doing this in travis and vagrant provisioning script
+#  Scenario: Install gems
+#    Given that I am in the project root directory "AutoGraderExamples"
+#    When I install gems
+#    Then I should see that there are no errors
 
   Scenario: Install or check AutoGraders
     Given that I am in the project root directory "AutoGraderExamples"
