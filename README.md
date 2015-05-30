@@ -59,7 +59,7 @@ Example Assignments for Use with the Ruby AutoGrader
 ==================
 
 **Directories:**
-- git-immersion: homework added by instructor
+- gitimmersion: homework added by instructor
   - autograder: tests run on student submissions, one per courseware section
   - public: skeletons and readmes included in courseware
   - solutions: instructor answers to homework problems, one with full score
