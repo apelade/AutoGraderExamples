@@ -11,12 +11,12 @@ Feature: Installation of dependencies
   Scenario: Install or check AutoGraders
     Given that I am in the project root directory "AutoGraderExamples"
     When I install or check "apelade/rag" as "rag"
-    And I change to branch "develop"
+    And I change to branch "master"
     And I install the AutoGrader gems
     Then I should see that there are no errors
 
   Scenario: Verify correct version of AutoGraders
     Given I go to the AutoGrader directory "rag"
     And it has an origin of "apelade/rag"
-    When I fetch the latest on origin branch "develop"
+    When I fetch the latest on origin branch "master"
     Then I should see no difference
